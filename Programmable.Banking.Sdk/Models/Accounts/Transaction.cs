@@ -26,16 +26,16 @@ namespace Programmable.Banking.Sdk.Models.Accounts
         public required int PostedOrder { get; set; }
 
         [JsonPropertyName("postingDate")]
-        public required required string PostingDate { get; set; }
+        public required string PostingDate { get; set; }
 
         [JsonPropertyName("valueDate")]
-        public required required string valueDate { get; set; }
+        public required string valueDate { get; set; }
 
         [JsonPropertyName("actionDate")]
-        public required required string actionDate { get; set; }
+        public required string actionDate { get; set; }
 
         [JsonPropertyName("transactionDate")]
-        public required required string TransactionDate { get; set; }
+        public required string TransactionDate { get; set; }
 
         [JsonPropertyName("amount")]
         public decimal Amount { get; set; }
