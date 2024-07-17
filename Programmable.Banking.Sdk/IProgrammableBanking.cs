@@ -13,17 +13,17 @@ namespace Programmable.Banking.Sdk
         Task<Response<Results<Merchants>>> GetMerchants();
 
         Task<Response<AccountList>> GetAccounts();
-        Task<Response<Balance>> GetAccountBalance(string accountNumber);
-        Task<Response<TransactionList>> GetAccountTransactions(string accountNumber);
-        Task<Response<List<Transfer>>> TransferMultiple(string accountNumber, Transfers transferList);
+        Task<Response<Balance>> GetAccountBalance(string accountId);
+        Task<Response<TransactionList>> GetAccountTransactions(string accountId);
+        Task<Response<List<Transfer>>> TransferMultiple(string accountId, Transfers transferList);
         Task<Response<Account>> CreateAccount(Account account);
-        Task DeleteAccount(string accountNumber);
+        Task DeleteAccount(string accountId);
 
         Task<Response<Beneficiary>> CreateBeneficiary();
         Task<Response<Results<Beneficiary>>> GetBeneficiaries();
-        Task<Response<List<BeneficiaryPayment>>> BeneficiaryPayment(string accountNumber, BeneficiaryPayments payments);
+        Task<Response<List<BeneficiaryPayment>>> BeneficiaryPayment(string accountId, BeneficiaryPayments payments);
 
-        Task<Response<Models.Transactions.Transaction>> CreateTransaction(string accountNumber, Models.Transactions.Transaction transaction);
-        Task DeleteTransactions(string accountNumber, string postingDate);
+        Task<Response<Models.Transactions.Transaction>> CreateTransaction(string accountId, Models.Transactions.Transaction transaction);
+        Task DeleteTransactions(string accountId, string postingDate);
     }
 }
